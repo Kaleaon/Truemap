@@ -1,0 +1,22 @@
+{
+  "name": "Truemap iOS",
+  "version": "1.0.0",
+  "description": "3D Reconstruction from YouTube Videos - iOS Application",
+  "main": "Truemap/TruemapApp.swift",
+  "directories": {
+    "test": "TruemapTests"
+  },
+  "scripts": {
+    "build": "xcodebuild -workspace Truemap.xcworkspace -scheme Truemap -configuration Debug",
+    "test": "xcodebuild test -workspace Truemap.xcworkspace -scheme Truemap -destination 'platform=iOS Simulator,name=iPhone 14'"
+  },
+  "keywords": [
+    "3d",
+    "reconstruction",
+    "computer-vision",
+    "sfm",
+    "mvs"
+  ],
+  "author": "Truemap Contributors",
+  "license": "MIT"
+}

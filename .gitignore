@@ -1,0 +1,110 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Xcode
+xcuserdata/
+*.xcworkspace/xcuserdata/
+*.xcworkspace/xcshareddata/
+DerivedData/
+*.moved-aside
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+*.xcuserstate
+project.xcworkspace/
+
+# CocoaPods
+Pods/
+*.lock
+
+# Android
+*.iml
+.gradle
+/local.properties
+/.idea/
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+*.apk
+*.ap_
+*.aab
+
+# NDK
+obj/
+.externalNativeBuild/
+
+# Gradle
+.gradle/
+build/
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+
+# Build artifacts
+*.o
+*.so
+*.a
+*.dylib
+*.lib
+*.dll
+*.exe
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+/tmp/
+
+# Logs
+*.log
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+*.test
+
+# Output files
+*.obj
+*.ply
+*.mesh
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+
+# C++
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
