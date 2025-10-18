@@ -8,9 +8,10 @@ A modern web application for viewing and interacting with Gaussian Splatting 3D 
 - 🖱️ **Interactive Controls**: Orbit, pan, and zoom with intuitive mouse controls
 - 📁 **File Upload**: Support for .ply file format commonly used in Gaussian Splatting
 - 🎨 **Color Rendering**: Full RGB color support from splat data
-- ⚡ **WebGL Powered**: Hardware-accelerated rendering using Three.js
+- ⚡ **WebGL Powered**: Hardware-accelerated rendering using pure WebGL
 - 📱 **Responsive Design**: Works on desktop and mobile devices
 - 🌙 **Modern UI**: Clean, dark-themed interface with smooth animations
+- 🚀 **Zero Dependencies**: No external 3D libraries required
 
 ## Getting Started
 
@@ -59,10 +60,10 @@ end_header
 
 ## Technology Stack
 
-- **Three.js**: 3D rendering engine
-- **WebGL**: Hardware-accelerated graphics
+- **Pure WebGL**: Custom shader-based 3D rendering
+- **WebGL Shaders**: GLSL vertex and fragment shaders
 - **HTML5 Canvas**: Rendering surface
-- **Vanilla JavaScript**: No framework dependencies
+- **Vanilla JavaScript**: No framework dependencies for maximum compatibility
 - **CSS3**: Modern styling and animations
 
 ## Browser Compatibility
@@ -111,9 +112,10 @@ Then navigate to `http://localhost:8000`
 
 1. **File Loading**: The application reads .ply files using the File API
 2. **Parsing**: Binary or ASCII PLY data is parsed to extract vertex positions and colors
-3. **Geometry Creation**: Three.js BufferGeometry is created from the parsed data
-4. **Rendering**: WebGL renders the point cloud with perspective projection
-5. **Interaction**: Mouse events control camera position and orientation
+3. **Buffer Creation**: WebGL vertex buffers are created from the parsed data
+4. **Shader Compilation**: GLSL shaders are compiled for point rendering
+5. **Rendering**: WebGL renders the point cloud with perspective projection using custom matrix math
+6. **Interaction**: Mouse events control camera position and orientation with smooth interpolation
 
 ## Limitations
 
@@ -144,8 +146,8 @@ MIT License - feel free to use this project for any purpose.
 ## Acknowledgments
 
 - Inspired by the Gaussian Splatting research
-- Built with Three.js library
-- Modern web technologies
+- Built with pure WebGL and modern web standards
+- Powered by native browser technologies
 
 ## Support
 
