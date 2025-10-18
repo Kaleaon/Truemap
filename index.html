@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truemap - Gaussian Splatting 3D Viewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎨 Truemap</h1>
+            <p class="subtitle">Gaussian Splatting 3D Scene Viewer</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="controls-panel">
+                <div class="control-section">
+                    <h3>Load Scene</h3>
+                    <div class="file-upload">
+                        <label for="fileInput" class="file-label">
+                            <span id="fileName">Choose .ply file</span>
+                            <input type="file" id="fileInput" accept=".ply" />
+                        </label>
+                    </div>
+                    
+                    <div class="sample-scenes">
+                        <h4>Sample Scenes</h4>
+                        <p class="info-text">Upload your own Gaussian Splatting .ply file to view it in 3D</p>
+                    </div>
+                </div>
+                
+                <div class="control-section">
+                    <h3>Camera Controls</h3>
+                    <div class="control-group">
+                        <label>Field of View</label>
+                        <input type="range" id="fovSlider" min="30" max="120" value="75" />
+                        <span id="fovValue">75°</span>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label>Point Size</label>
+                        <input type="range" id="pointSizeSlider" min="1" max="10" value="3" step="0.5" />
+                        <span id="pointSizeValue">3</span>
+                    </div>
+                    
+                    <button id="resetCamera" class="btn">Reset Camera</button>
+                </div>
+                
+                <div class="control-section">
+                    <h3>Scene Info</h3>
+                    <div class="info-panel">
+                        <div class="info-item">
+                            <span class="info-label">Points:</span>
+                            <span id="pointCount">0</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Status:</span>
+                            <span id="statusText">Ready</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="control-section instructions">
+                    <h3>Instructions</h3>
+                    <ul>
+                        <li><strong>Rotate:</strong> Left mouse drag</li>
+                        <li><strong>Pan:</strong> Right mouse drag</li>
+                        <li><strong>Zoom:</strong> Mouse wheel</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="viewer-container">
+                <canvas id="canvas3d"></canvas>
+                <div id="loadingOverlay" class="loading-overlay">
+                    <div class="spinner"></div>
+                    <p>Loading scene...</p>
+                </div>
+                <div id="dropZone" class="drop-zone">
+                    <div class="drop-content">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                        <h2>Drop .ply file here</h2>
+                        <p>or click to browse</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
